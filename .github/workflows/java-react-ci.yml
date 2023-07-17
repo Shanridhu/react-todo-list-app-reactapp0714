@@ -62,4 +62,4 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: app-artifacts
-          path: downloads/build/yarn.lock #android/app/build
+          path: downloads/build/ #android/app/build
