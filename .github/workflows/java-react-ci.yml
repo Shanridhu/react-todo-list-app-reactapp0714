@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - run: mkdir downloads
+
       
       - name: Checkout code
         uses: actions/checkout@v3
@@ -51,7 +51,9 @@ jobs:
       - name: Install npm dependencies
         run: yarn install
         #run: yarn install --frozen-lockfile
-
+        
+      - run: mkdir downloads
+      
       - name: Build and test React Native project
         run: yarn test
     
