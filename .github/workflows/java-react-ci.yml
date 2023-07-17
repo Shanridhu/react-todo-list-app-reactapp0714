@@ -59,7 +59,7 @@ jobs:
     
       - name: Publish artifacts
         #working-directory: downloads
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v1
         with:
           name: app-artifacts
           path: downloads/build/ #android/app/build
