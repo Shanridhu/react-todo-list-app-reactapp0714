@@ -66,5 +66,5 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: app-artifacts
-          path: build
+          path: ~/.build #path: build
           if-no-files-found: error
