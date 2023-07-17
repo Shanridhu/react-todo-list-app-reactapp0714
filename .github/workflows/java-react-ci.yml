@@ -37,13 +37,13 @@ jobs:
         #run: mvn clean install
 
       - name: Install Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
           node-version: ${{env.NODE_VERSION}}
 
 
       - name: Cache Yarn packages
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: ~/.yarn
           key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
@@ -59,7 +59,7 @@ jobs:
     
       - name: Publish artifacts
         #working-directory: downloads
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: app-artifacts
-          path: frontend/build #android/app/build
+          path: build/ #android/app/build
