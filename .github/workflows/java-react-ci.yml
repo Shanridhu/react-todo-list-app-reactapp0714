@@ -61,10 +61,10 @@ jobs:
       - name: Build and test React Native project
         run: yarn test
     
-      - name: Publish artifacts
-        #working-directory: downloads
-        uses: actions/upload-artifact@v3
+      #- name: Publish artifacts
+      - run: mkdir staging && cp target/*jar-with-dependencies.jar staging
+      - uses: actions/upload-artifact@v3
         with:
           name: app-artifacts
-          path: ~/.build #path: build
+          path: staging #path: build
           if-no-files-found: error
