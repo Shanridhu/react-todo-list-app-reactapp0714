@@ -7,13 +7,14 @@ on:
 env:
   JAVA_VERSION: '17'
   NODE_VERSION: '14' 
+defaults:
+  run:
+    working-directory: frontend 
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./build
+
 
     steps:
 
@@ -65,4 +66,5 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: app-artifacts
-          path: build/app-artifacts #android/app/build
+          path: frontend/build
+          if-no-files-found: error
