@@ -52,13 +52,14 @@ jobs:
         run: yarn install
         #run: yarn install --frozen-lockfile
         
-      - run: mkdir downloads
+
       
       - name: Build and test React Native project
         run: yarn test
     
       - name: Publish artifacts
+        #working-directory: downloads
         uses: actions/upload-artifact@v3
         with:
           name: app-artifacts
-          path: downloads #android/app/build
+          path: downloads/build/yarn.lock #android/app/build
