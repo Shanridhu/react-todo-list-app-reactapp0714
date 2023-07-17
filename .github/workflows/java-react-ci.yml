@@ -7,9 +7,9 @@ on:
 env:
   JAVA_VERSION: '17'
   NODE_VERSION: '14' 
-defaults:
-  run:
-    working-directory: frontend 
+#defaults:
+ # run:
+  #  working-directory: frontend 
 
 jobs:
   build:
