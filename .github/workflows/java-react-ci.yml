@@ -58,7 +58,7 @@ jobs:
         run: yarn test
     
       - name: Publish artifacts
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: app-artifacts
           path: downloads #android/app/build
