@@ -13,6 +13,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - run: mkdir downloads
+      
       - name: Checkout code
         uses: actions/checkout@v3
 
@@ -52,9 +54,7 @@ jobs:
 
       - name: Build and test React Native project
         run: yarn test
-        
-      - run: mkdir downloads #android/app/build
-      
+    
       - name: Publish artifacts
         uses: actions/upload-artifact@v2
         with:
